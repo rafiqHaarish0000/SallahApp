@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Salaah</string>
+    <string name="selected_item">Selected item:</string>
+    <string name="saved_high_score_key">salaah</string>
+
+    <string name="prayer1"> الفجر</string>
+    <string name="prayer2"> الظهر/ Dhuhr</string>
+    <string name="prayer3"> العصر/ Asr</string>
+    <string name="prayer4"> المغرب/ Maghrib</string>
+    <string name="prayer5"> العش/ Ish</string>
+
+    <string-array name="Languages">
+        <item>Random</item>
+        <item>Reciter one </item>
+        <item>Reciter two</item>
+        <item>Reciter three</item>
+       <!-- <item>Reciter four</item>
+        <item>Reciter five</item>
+        <item>Reciter six</item>
+        <item>Reciter seven</item>-->
+       <!-- <item>Reciter eight</item>
+        <item>Reciter nine</item>
+        <item>Reciter ten</item>-->
+
+    </string-array>
+
+
+    <string-array name="countries">
+        <item>ZA</item>
+        <item>IN</item>
+        <item>PK</item>
+        <item>SO</item>
+        <item>BD</item>
+        <item>ZW</item>
+
+        <!-- <item>Reciter four</item>
+         <item>Reciter five</item>
+         <item>Reciter six</item>
+         <item>Reciter seven</item>-->
+        <!-- <item>Reciter eight</item>
+         <item>Reciter nine</item>
+         <item>Reciter ten</item>-->
+
+    </string-array>
+</resources>

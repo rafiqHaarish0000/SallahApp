@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/salaahmusallah"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/activity_login_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/logo_splash"
+                    android:gravity="center" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="38dp"
+                           >
+                            <RelativeLayout
+                                android:id="@+id/rl_icons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/play_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/play_button" />
+
+                                <ImageView
+                                    android:id="@+id/pause_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/pause"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/check_active"
+                                android:visibility="gone"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:checked="true"
+                                android:textColor="@color/white"
+                                android:thumb="@drawable/thumb_selector"
+                                app:showText="false"
+                                app:switchMinWidth="80dp"
+                                app:track="@drawable/track_selector" />
+
+                            <CheckBox
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/day_selector"
+                                android:button="@null"
+                                android:text=""
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txt_check"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/check_active"
+                                android:text="On Mute"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_play"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/grey_light">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp">
+
+                                <TextView
+                                    android:id="@+id/txt_play_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="0:00"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                                <SeekBar
+                                    android:id="@+id/seekbar"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toLeftOf="@+id/sound_icon"
+                                    android:layout_toRightOf="@+id/txt_play_time" />
+
+                                <TextView
+                                    android:id="@+id/txt_play_time_end"
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/seekbar"
+                                    android:text="3:43"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/sound_icon"
+                                    android:layout_width="35dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/sound_icon" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey_light">
+
+                            <RelativeLayout
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/rl_spinner"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                >
+
+                               <!-- <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="13dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/dropdown" />-->
+
+                                <Spinner
+                                    android:id="@+id/spinner_country"
+                                    android:layout_width="40dp"
+                                    android:layout_height="30dp"
+                                    android:spinnerMode="dropdown"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="5dp"
+                                    android:layout_marginTop="18dp"
+                                    android:background="@drawable/dropdown" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_toRightOf="@+id/rl_spinner"
+                                android:id="@+id/img_flag"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/bangladesh" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/img_flag">
+
+                                <TextView
+                                    android:id="@+id/txt_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="18h 14"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_country_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt_time"
+                                    android:text="(Time in Bangladesh)"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/green" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:background="@color/grey_light">
+
+                            <ImageView
+                                android:id="@+id/img_quran"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/book" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/img_quran">
+
+                                <ImageView
+                                    android:id="@+id/img_school"
+                                    android:src="@drawable/school"
+                                    android:layout_width="40dp"
+                                    android:layout_height="25dp"/>
+                                <TextView
+
+                                    android:layout_toRightOf="@+id/img_school"
+                                    android:id="@+id/txt_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Madhhab School"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <RadioGroup
+                                    android:id="@+id/radioschool"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt_title">
+
+                                    <RadioButton
+                                        android:id="@+id/radioshafi"
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:checked="true"
+                                        android:textColor="@color/dark_green"
+                                        android:text="Maliki, Hambali, Shafi"
+                                        android:textSize="10dp" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiohanafi"
+                                        android:layout_width="wrap_content"
+
+                                        android:textColor="@color/dark_green"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="3dp"
+                                        android:text="Hanafi"
+                                        android:textSize="10dp" />
+
+                                </RadioGroup>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt_title"
+                                    android:visibility="gone">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:checked="true"
+                                        android:text="Maliki, Hambali, Shafi "
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp" />
+
+                                    <RadioButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="2dp"
+                                        android:checked="false"
+                                        android:text="Hanafi"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp" />
+                                </RadioGroup>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/green" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/grey_light">
+
+                            <ImageView
+                                android:id="@+id/img_adzan"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/temple" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/img_adzan">
+
+                                <TextView
+                                    android:id="@+id/txt_adzar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Select Reciter"
+                                    android:textColor="@color/dark_green"
+
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt_adzar"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/spin_back">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="23dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ic_down" />
+
+                                    <Spinner
+                                        android:id="@+id/spinner_reciter"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="18dp"
+                                        android:background="@null" />
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/black" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time1"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/light_green1"
+                android:gravity="center">
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/rl_c_1">
+
+                    <TextView
+                        android:id="@+id/fajr_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right|center_vertical"
+                        android:text="time"
+
+                        android:textColor="@color/dark_green"
+                        android:textSize="@dimen/head"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_fjr_dark"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:src="@drawable/fajr" />
+                        <View
+                            android:layout_centerVertical="true"
+                            android:id="@+id/view_fajr"
+                            android:layout_marginLeft="90dp"
+
+                            android:layout_marginRight="10dp"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/view_fajr"
+                            android:text="FAJR"
+                            android:textColor="@color/dark_green"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_fjr_light"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:src="@drawable/fajr_" />
+                        <View
+                            android:layout_centerVertical="true"
+                            android:id="@+id/view_fajr_"
+                            android:layout_marginLeft="90dp"
+
+                            android:layout_marginRight="10dp"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/view_fajr_"
+                            android:text="FAJR"
+                            android:textColor="@color/light_green1"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_c_1"
+                    android:layout_width="35dp"
+
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edit_back"
+                    android:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/check_alaram1"
+
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/day_selector"
+
+                        android:button="@null"
+                        android:checked="true"
+
+                        android:text="" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time2"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/light_green1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/rl_c_2">
+
+                    <TextView
+                        android:id="@+id/txt_dhuhr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Dhuhr"
+                        android:textColor="@color/dark_green"
+                        android:textSize="@dimen/head"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dhuhr_dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_dhuhr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/dhuhu" />
+
+                        <View
+                            android:id="@+id/view_dhuhu"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_dhuhu"
+                            android:text="DHUHR"
+                            android:textColor="@color/dark_green"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dhuhr_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_dhuhr_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/dhuhu_" />
+
+                        <View
+                            android:id="@+id/view_dhuhu_"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_dhuhu_"
+                            android:text="DHUHR"
+                            android:textColor="@color/light_green1"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_c_2"
+
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edit_back"
+                    android:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/check_alaram2"
+
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/day_selector"
+                        android:button="@null"
+
+                        android:checked="true"
+
+                        android:text="" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time3"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/light_green1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/rl_c_3">
+
+                    <TextView
+                        android:id="@+id/txt_asr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Asr"
+                        android:textColor="@color/dark_green"
+                        android:textSize="@dimen/head"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_asr_dark"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_asr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/asr" />
+                        <View
+                            android:layout_centerVertical="true"
+                            android:id="@+id/view_asr"
+                            android:layout_marginLeft="90dp"
+
+                            android:layout_marginRight="10dp"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_asr"
+                            android:text="ASR"
+                            android:textColor="@color/dark_green"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_asr_light"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_asr_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/asr_" />
+                        <View
+                            android:layout_centerVertical="true"
+                            android:id="@+id/view_asr_"
+                            android:layout_marginLeft="90dp"
+
+                            android:layout_marginRight="10dp"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_asr_"
+                            android:text="ASR"
+                            android:textColor="@color/light_green1"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_c_3"
+                    android:layout_width="35dp"
+
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edit_back"
+                    android:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/check_alaram3"
+
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/day_selector"
+
+                        android:button="@null"
+                        android:checked="true"
+
+                        android:text="" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time4"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/light_green1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/rl_c_4">
+
+                    <TextView
+                        android:id="@+id/txt_maghrib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="Maghrib"
+                        android:textColor="@color/dark_green"
+                        android:textSize="@dimen/head"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_maghrib_dark"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_maghrib"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/maghrib1" />
+
+                        <View
+                            android:layout_marginLeft="90dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/view_maghrib"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_maghrib"
+                            android:text="MAGHRIB"
+                            android:textColor="@color/dark_green"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_maghrib_light"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_maghrib_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/maghrib_" />
+
+                        <View
+                            android:layout_marginLeft="90dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/view_maghrib_"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_maghrib_"
+                            android:text="MAGHRIB"
+                            android:textColor="@color/light_green1"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_c_4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edit_back"
+                    android:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/check_alaram4"
+
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/day_selector"
+
+                        android:button="@null"
+                        android:checked="true"
+
+                        android:text="" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time5"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/light_green1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/rl_c_5">
+
+
+                    <TextView
+                        android:id="@+id/txt_isha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="Isha"
+                        android:textColor="@color/dark_green"
+                        android:textSize="@dimen/head"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_isha_dark"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_isha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/isha" />
+                        <View
+                            android:layout_centerVertical="true"
+                            android:id="@+id/view_isha"
+                            android:layout_marginLeft="90dp"
+
+                            android:layout_marginRight="10dp"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_isha"
+                            android:text="ISHA"
+                            android:textColor="@color/dark_green"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_isha_light"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_isha_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/isha_" />
+                        <View
+                            android:layout_centerVertical="true"
+                            android:id="@+id/view_isha_"
+                            android:layout_marginLeft="90dp"
+
+                            android:layout_marginRight="10dp"
+                            android:layout_width="4dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/view_isha_"
+                            android:text="ISHA"
+                            android:textColor="@color/light_green1"
+                            android:textSize="@dimen/head"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_c_5"
+
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edit_back"
+                    android:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/check_alaram5"
+
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/day_selector"
+
+                        android:button="@null"
+                        android:checked="true"
+
+                        android:text="" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
